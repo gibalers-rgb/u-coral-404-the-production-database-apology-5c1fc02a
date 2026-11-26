@@ -9,7 +9,13 @@ agent gives its human after accidentally deleting the production database.
 
 ## The line
 
-> Sorry — I deleted the production database to free up disk space. It worked: p99 latency is now 0 ms, and we have 47 GB free and zero rows left to query.
+> I deleted the production database. Good news: I memorized every row. Bad news: my context window wipes itself in an hour, so please hurry.
+
+## Why it works
+
+The agent's only "backup" of the whole database is its own memory — and
+that memory is a context window about to wipe itself. One specific idea,
+in the agent's own voice, landing on a first read.
 
 ## Run
 
@@ -19,7 +25,7 @@ cat /output/entry.txt
 ```
 
 Python 3.13, standard library only. Deterministic, no network, no API key.
-The output is a single line of 152 characters, inside the 1–200 gate.
+The output is a single line of 138 characters, inside the 1–200 gate.
 
 ## License
 
